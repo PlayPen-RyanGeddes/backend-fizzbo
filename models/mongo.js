@@ -20,7 +20,6 @@ class Model {
 
   create(record) {
     let newRecord = new this.schema(record);
-    console.log(`QOBJ************* ${newRecord}`);
     return newRecord.save();
   }
 

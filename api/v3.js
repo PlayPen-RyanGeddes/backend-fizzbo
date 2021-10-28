@@ -85,14 +85,12 @@ async function handleGetAll(request, response, next) {
   try {
 
     let list = await request.model.get(request.query);
-    console.log(list);
     const output = {
       count: list.length,
       results: list,
     };
     response.status(200).json(output);
   } catch(e) {
-    console.log(e);
     next(e);
   }
 }
