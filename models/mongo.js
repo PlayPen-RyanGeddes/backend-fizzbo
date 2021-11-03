@@ -13,6 +13,7 @@ class Model {
   }
 
   get(queryObject = {}) {
+
     return this.schema.find(queryObject);
   }
 
